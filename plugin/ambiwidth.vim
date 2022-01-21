@@ -7,7 +7,9 @@ if (&encoding == 'utf-8') && exists('*setcellwidths')
 	set ambiwidth=single
 
 	let s:xs = []
+
 	let s:xs += [[0x2030, 0x203f, 2]] " ‰‱′″‴‵‶‷‸‹›※‼‽‾‿
+	let s:xs += [[0x2103, 0x2103, 2]] " ℃
 	let s:xs += [[0x2460, 0x246f, 2]] " ①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯
 	let s:xs += [[0x2470, 0x247f, 2]] " ⑰⑱⑲⑳⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿
 	let s:xs += [[0x2480, 0x248f, 2]] " ⒀⒁⒂⒃⒄⒅⒆⒇⒈⒉⒊⒋⒌⒍⒎⒏
