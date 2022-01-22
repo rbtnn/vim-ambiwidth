@@ -3,7 +3,7 @@ scriptencoding utf-8
 
 let g:loaded_ambiwidth = 1
 
-if (&encoding == 'utf-8') && exists('*setcellwidths')
+if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
 	set ambiwidth=single
 
 	let s:xs = []
