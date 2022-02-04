@@ -10,6 +10,8 @@ if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
 
 	let s:xs += [[0x2030, 0x203f, 2]] " ‰‱′″‴‵‶‷‸‹›※‼‽‾‿
 	let s:xs += [[0x2103, 0x2103, 2]] " ℃
+	let s:xs += [[0x2160, 0x2169, 2]] " ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ
+	let s:xs += [[0x2170, 0x2179, 2]] " ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹ
 	let s:xs += [[0x2460, 0x246f, 2]] " ①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯
 	let s:xs += [[0x2470, 0x247f, 2]] " ⑰⑱⑲⑳⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿
 	let s:xs += [[0x2480, 0x248f, 2]] " ⒀⒁⒂⒃⒄⒅⒆⒇⒈⒉⒊⒋⒌⒍⒎⒏
@@ -30,6 +32,8 @@ if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
 	let s:xs += [[0x25b2, 0x25b3, 2]] " ▲△
 	let s:xs += [[0x25bc, 0x25bd, 2]] " ▼▽
 	let s:xs += [[0x25c6, 0x25c7, 2]] " ◆◇
+	let s:xs += [[0x25cb, 0x25cb, 2]] " ○
+	let s:xs += [[0x25cf, 0x25cf, 2]] " ●
 	let s:xs += [[0x2600, 0x260f, 2]] " ☀☁☂☃☄★☆☇☈☉☊☋☌☍☎☏
 	let s:xs += [[0x2610, 0x261f, 2]] " ☐☑☒☓☔☕☖☗☘☙☚☛☜☝☞☟
 	let s:xs += [[0x2620, 0x262f, 2]] " ☠☡☢☣☤☥☦☧☨☩☪☫☬☭☮☯
