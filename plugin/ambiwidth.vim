@@ -26,7 +26,7 @@ if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
 	let s:xs += [[0x24d0, 0x24df, 2]] " ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟ
 	let s:xs += [[0x24e0, 0x24ef, 2]] " ⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ⓪⓫⓬⓭⓮⓯
 	let s:xs += [[0x24f0, 0x24ff, 2]] " ⓰⓱⓲⓳⓴⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾⓿
-	let s:xs += [[0x2500, 0x257f, 2]] " https://en.wikipedia.org/wiki/Box_Drawing
+	"let s:xs += [[0x2500, 0x257f, 2]] " https://en.wikipedia.org/wiki/Box_Drawing
 	let s:xs += [[0x25a0, 0x25a1, 2]] " ■□
 	let s:xs += [[0x25b2, 0x25b3, 2]] " ▲△
 	let s:xs += [[0x25bc, 0x25bd, 2]] " ▼▽
