@@ -3804,5 +3804,3 @@ function! s:cica() abort
 	return xs
 endfunction
 
-call ambiwidth#plugin_vimscript_generator()
-
