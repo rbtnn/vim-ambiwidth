@@ -3,7 +3,7 @@ scriptencoding utf-8
 
 let g:loaded_ambiwidth = 1
 
-if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
+if (&encoding == 'utf-8') && exists('*setcellwidths') " && has('vim_starting')
 	set ambiwidth=single
 
 	let s:xs = []
@@ -64,6 +64,72 @@ if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
 	let s:xs += [[0x27f5, 0x27f7, 2]] " ⟵⟶⟷
 	let s:xs += [[0x2b05, 0x2b0d, 2]] " ⬅⬆⬇⬈⬉⬊⬋⬌⬍
 	let s:xs += [[0x303f, 0x303f, 2]] " 〿
+
+	" Characters used in https://github.com/ryanoasis/vim-devicons/blob/master/plugin/webdevicons.vim
+	let s:xs += [[0xe600, 0xe600, 2]] " 
+	let s:xs += [[0xe603, 0xe603, 2]] " 
+	let s:xs += [[0xe606, 0xe606, 2]] " 
+	let s:xs += [[0xe607, 0xe607, 2]] " 
+	let s:xs += [[0xe608, 0xe608, 2]] " 
+	let s:xs += [[0xe609, 0xe609, 2]] " 
+	let s:xs += [[0xe60a, 0xe60a, 2]] " 
+	let s:xs += [[0xe60b, 0xe60b, 2]] " 
+	let s:xs += [[0xe60c, 0xe60c, 2]] " 
+	let s:xs += [[0xe60d, 0xe60d, 2]] " 
+	let s:xs += [[0xe60e, 0xe60e, 2]] " 
+	let s:xs += [[0xe60f, 0xe60f, 2]] " 
+	let s:xs += [[0xe610, 0xe610, 2]] " 
+	let s:xs += [[0xe611, 0xe611, 2]] " 
+	let s:xs += [[0xe614, 0xe614, 2]] " 
+	let s:xs += [[0xe615, 0xe615, 2]] " 
+	let s:xs += [[0xe619, 0xe619, 2]] " 
+	let s:xs += [[0xe61b, 0xe61b, 2]] " 
+	let s:xs += [[0xe61c, 0xe61c, 2]] " 
+	let s:xs += [[0xe61d, 0xe61d, 2]] " 
+	let s:xs += [[0xe61e, 0xe61e, 2]] " 
+	let s:xs += [[0xe61f, 0xe61f, 2]] " 
+	let s:xs += [[0xe620, 0xe620, 2]] " 
+	let s:xs += [[0xe623, 0xe623, 2]] " 
+	let s:xs += [[0xe624, 0xe624, 2]] " 
+	let s:xs += [[0xe627, 0xe627, 2]] " 
+	let s:xs += [[0xe628, 0xe628, 2]] " 
+	let s:xs += [[0xe62b, 0xe62b, 2]] " 
+	let s:xs += [[0xe62c, 0xe62c, 2]] " 
+	let s:xs += [[0xe62d, 0xe62d, 2]] " 
+	let s:xs += [[0xe706, 0xe706, 2]] " 
+	let s:xs += [[0xe707, 0xe707, 2]] " 
+	let s:xs += [[0xe70c, 0xe70c, 2]] " 
+	let s:xs += [[0xe718, 0xe718, 2]] " 
+	let s:xs += [[0xe728, 0xe728, 2]] " 
+	let s:xs += [[0xe737, 0xe737, 2]] " 
+	let s:xs += [[0xe738, 0xe738, 2]] " 
+	let s:xs += [[0xe745, 0xe745, 2]] " 
+	let s:xs += [[0xe750, 0xe750, 2]] " 
+	let s:xs += [[0xe752, 0xe752, 2]] " 
+	let s:xs += [[0xe753, 0xe753, 2]] " 
+	let s:xs += [[0xe755, 0xe755, 2]] " 
+	let s:xs += [[0xe768, 0xe768, 2]] " 
+	let s:xs += [[0xe769, 0xe769, 2]] " 
+	let s:xs += [[0xe76a, 0xe76a, 2]] " 
+	let s:xs += [[0xe770, 0xe770, 2]] " 
+	let s:xs += [[0xe78f, 0xe78f, 2]] " 
+	let s:xs += [[0xe791, 0xe791, 2]] " 
+	let s:xs += [[0xe795, 0xe795, 2]] " 
+	let s:xs += [[0xe798, 0xe798, 2]] " 
+	let s:xs += [[0xe7a7, 0xe7a7, 2]] " 
+	let s:xs += [[0xe7a8, 0xe7a8, 2]] " 
+	let s:xs += [[0xe7af, 0xe7af, 2]] " 
+	let s:xs += [[0xe7b0, 0xe7b0, 2]] " 
+	let s:xs += [[0xe7b1, 0xe7b1, 2]] " 
+	let s:xs += [[0xe7b4, 0xe7b4, 2]] " 
+	let s:xs += [[0xe7b6, 0xe7b6, 2]] " 
+	let s:xs += [[0xe7b8, 0xe7b8, 2]] " 
+	let s:xs += [[0xe7ba, 0xe7ba, 2]] " 
+	let s:xs += [[0xf0fd, 0xf0fd, 2]] " 
+	let s:xs += [[0xf296, 0xf296, 2]] " 
+	let s:xs += [[0xf2b8, 0xf2b8, 2]] " 
+	let s:xs += [[0xf313, 0xf313, 2]] " 
+	let s:xs += [[0xf499, 0xf499, 2]] " 
 
 	call setcellwidths(s:xs)
 endif
