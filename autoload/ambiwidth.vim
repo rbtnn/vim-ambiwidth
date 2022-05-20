@@ -45,7 +45,13 @@ function! s:double_cells_codes(xs) abort
 		if 0 == start_code
 			let start_code = code
 		elseif 0 == end_code
-			let end_code = code
+			if start_code + 1 == code
+				let end_code = code
+			else
+				let lines += [printf("\t\t\\ [%s, %s, 2],", start_code, start_code)]
+				let start_code = code
+				let end_code = 0
+			endif
 		elseif end_code + 1 == code
 			let end_code = code
 		else
@@ -122,6 +128,11 @@ function! s:default() abort
 	let xs += [[0x27f5, 0x27f7]] " ⟵⟶⟷
 	let xs += [[0x2b05, 0x2b0d]] " ⬅⬆⬇⬈⬉⬊⬋⬌⬍
 	let xs += [[0x303f, 0x303f]] " 〿
+	let xs += [[0xe62e, 0xe62e]] " 
+	let xs += [[0xf31c, 0xf31c]] " 
+	let xs += [[0xf31b, 0xf31b]] " 
+	let xs += [[0xf315, 0xf315]] " 
+	let xs += [[0xf316, 0xf316]] " 
 	return xs
 endfunction
 
