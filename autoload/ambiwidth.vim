@@ -18,6 +18,19 @@ function! ambiwidth#plugin_vimscript_generator() abort
 	call writefile(lines, expand(s:rootdir .. '/plugin/ambiwidth.vim'))
 endfunction
 
+function! ambiwidth#list_generator() abort
+	let xs = s:default() + s:cica()
+	let lines = []
+	for x in xs
+		for c in range(x[0], x[1])
+			let lines += [printf('0x%x: "%s"', c, nr2char(c))]
+		endfor
+	endfor
+	call writefile(sort(lines), expand(s:rootdir .. '/list.txt'))
+endfunction
+
+
+
 function! s:double_cells_codes(xs) abort
 	let d = {}
 	for x in a:xs

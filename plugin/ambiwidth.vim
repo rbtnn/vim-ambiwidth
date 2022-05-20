@@ -1,7 +1,7 @@
 
 let g:loaded_ambiwidth = 1
 
-if (&encoding == 'utf-8') && exists('*setcellwidths')
+if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
 	set ambiwidth=single
 	call setcellwidths([
 		\ [0x2030, 0x203f, 2],

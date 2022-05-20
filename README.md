@@ -5,7 +5,5 @@
 2022年5月18日時点で `setcellwidths()` はVimのみ実装されているため、NeovimではこのVimプラグインは機能しません( https://github.com/neovim/neovim/pull/13883 )。  
 また、https://miiton.github.io/Cica/ に掲載されている大量の絵文字を `setcellwidths()` にて全角幅にしています。  
 もしこれが不要であれば .vimrcに `let g:ambiwidth_cica_enabled = v:false` を設定し無効にしてください。  
-
-
-
+このプラグインにより全角幅にしている文字一覧は[list.txt](https://github.com/rbtnn/vim-ambiwidth/blob/main/list.txt)にあります。
 
