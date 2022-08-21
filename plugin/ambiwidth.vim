@@ -102,5 +102,6 @@ if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
 		\ [0xfe0b0, 0xfe0b5, 2],
 		\ [0xfe566, 0xfe568, 2],
 		\ [0xff500, 0xffd46, 2],
-		\ ] : []))
+		\ ] : [])
+		\ + get(g:, 'ambiwidth_add_list', []))
 endif

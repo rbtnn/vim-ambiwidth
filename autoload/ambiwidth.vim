@@ -12,7 +12,8 @@ function! ambiwidth#plugin_vimscript_generator() abort
 		\ ] + s:double_cells_codes(s:default()) + [
 		\ "\t\t\\ ] + (get(g:, 'ambiwidth_cica_enabled', v:true) ? [",
 		\ ] + s:double_cells_codes(s:cica()) + [
-		\ "\t\t\\ ] : []))",
+		\ "\t\t\\ ] : [])",
+		\ "\t\t\\ + get(g:, 'ambiwidth_add_list', []))",
 		\ "endif",
 		\ ]
 	call writefile(lines, expand(s:rootdir .. '/plugin/ambiwidth.vim'))
