@@ -1,4 +1,6 @@
-
+if get(g:, 'loaded_ambiwidth', 0)
+    finish
+endif
 let g:loaded_ambiwidth = 1
 
 if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
