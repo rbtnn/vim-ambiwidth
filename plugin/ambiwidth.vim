@@ -1,6 +1,4 @@
-if get(g:, 'loaded_ambiwidth', 0)
-    finish
-endif
+
 let g:loaded_ambiwidth = 1
 
 if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
@@ -16,8 +14,6 @@ if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')
 		\ [0x2266, 0x2267, 2],
 		\ [0x2460, 0x24ff, 2],
 		\ [0x25a0, 0x25a1, 2],
-		\ [0x25b2, 0x25b3, 2],
-		\ [0x25bc, 0x25bd, 2],
 		\ [0x25c6, 0x25c7, 2],
 		\ [0x25cb, 0x25cb, 2],
 		\ [0x25cf, 0x25cf, 2],
