@@ -1,7 +1,7 @@
 
 let s:rootdir = expand('<sfile>:h:h')
 
-function! ambiwidth_generator#plugin_vimscript_generator() abort
+function! ambiwidth_generator#make_vimscript() abort
   let lines = [
     \ "function! ambiwidth#set_ambiwidth() abort",
     \ "\tset ambiwidth=single",
@@ -16,7 +16,7 @@ function! ambiwidth_generator#plugin_vimscript_generator() abort
   call writefile(lines, expand(s:rootdir .. '/autoload/ambiwidth.vim'))
 endfunction
 
-function! ambiwidth_generator#list_generator() abort
+function! ambiwidth_generator#make_list() abort
   let xs = s:default() + s:cica()
   let lines = []
   for x in xs
