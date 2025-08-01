@@ -6,7 +6,7 @@ function! ambiwidth#plugin_vimscript_generator() abort
         \ "",
         \ "let g:loaded_ambiwidth = 1",
         \ "",
-        \ "if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')",
+        \ "function! ambiwidth#set_ambiwidth() abort",
         \ "\tset ambiwidth=single",
         \ "\tcall setcellwidths([",
         \ ] + s:double_cells_codes(s:default()) + [
@@ -14,6 +14,10 @@ function! ambiwidth#plugin_vimscript_generator() abort
         \ ] + s:double_cells_codes(s:cica()) + [
         \ "\t\t\\ ] : [])",
         \ "\t\t\\ + get(g:, 'ambiwidth_add_list', []))",
+        \ "endfunction",
+        \ "",
+        \ "if (&encoding == 'utf-8') && exists('*setcellwidths') && has('vim_starting')",
+        \ "\tcall ambiwidth#set_ambiwidth()",
         \ "endif",
         \ ]
     call writefile(lines, expand(s:rootdir .. '/plugin/ambiwidth.vim'))
